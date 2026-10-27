@@ -2,11 +2,10 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class MuscleSelect : MonoBehaviour
+public class MuscleSelection : MonoBehaviour
 {  
     public bool selectedMuscle = false;
-    public bool hideMuscle = false;
-    public bool isHidden = false;
+    //public bool hideMuscle = false; //muscle is NOT hidden by default
     private MeshRenderer meshRenderer;
 
     [SerializeField]
@@ -16,8 +15,8 @@ public class MuscleSelect : MonoBehaviour
 
     //link specific nerves
     [SerializeField]
-    public GameObject[] nerveList;
-    //public List<GameObject> nerveList = new List<GameObject>();
+    public GameObject[] nerveInnervation;
+    //public List<GameObject> nerveInnervation = new List<GameObject>();
 
     private NerveSelection nerveSelection;
 
@@ -26,21 +25,17 @@ public class MuscleSelect : MonoBehaviour
     {
         meshRenderer = GetComponent<MeshRenderer>();
         materialOriginal = meshRenderer.material;
+
+        /*if (!hideMuscle) // muscle default = NOT hidden
+        {
+            gameObject.SetActive(true);
+        }*/
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (selectedMuscle)
-        {
-            Debug.Log (transform.name + " is selected");
-            //show menu
-        }
-        if (!selectedMuscle)
-        {
-            Debug.Log (transform.name + " is not selected");
-            //show menu
-        }
+       
     }
 
     void OnMouseDown()
@@ -57,32 +52,36 @@ public class MuscleSelect : MonoBehaviour
             meshRenderer.sharedMaterial = materialOriginal;
         }
 
-        for (int i = 0; i < nerveList.Length; i++)
+        foreach (GameObject nerve in nerveInnervation)
         {
-            nerveList[i].nerveSelection.ShowNerve();
+            nerveSelection = nerve.GetComponent<NerveSelection>();
+            if (nerveSelection != null)
+            {
+                Debug.Log ("nerve variable changed");
+                nerveSelection.selectedNerve = selectedMuscle;
+                //nerveSelection.showNerve = selectedMuscle;
+            }
         }
     }
 
-    public void HideMuscle()
-    {
-        if (hideMuscle && !selectedMuscle) //need to make button change this variable later
+}
+
+/*if (selectedMuscle && hideMuscle)//if Hide Muscle button is clicked hideMuscle is true
+        {
+            Debug.Log (transform.name + " is shown");
+            //show menu
+            gameObject.SetActive(false);
+        }
+
+        if (hideMuscle && selectedMuscle) //if Hide Muscle button is clicked hideMuscle is true
         {
             gameObject.SetActive(false);
         }
-        else if (!hideMuscle && selectedMuscle)
+        else if (selectedMuscle) //if (!hideMuscle && selectedMuscle) //if selected and hideMuscle button NOT clicked
         {
             gameObject.SetActive(true);
         }
-    }
-}
 
-/*
- //nerveList.nerveSelection.ShowNerve();
-        //nerveList.nerveSelection.selectedNerve = !nerveList.nerveSelection.selectedNerve;
-            for (int i = 0; i < nerveList.Count; i++)
-        {
-            nerveList[i].SetActive(!isHidden);
-        }
     clickCount ++; //3 clicks, at = 0, not highlighted. 
         if (clickCount >= materialSelection.Length)
         {
