@@ -1,0 +1,27 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"name": "HomePracticeProject",
+			"path": "../../../../../OneDrive - The Glasgow School of Art/cloud_Interactive App Development/HomePracticeProject"
+		},
+		{
+			"name": "MyFourthProject",
+			"path": "../../../../../OneDrive - The Glasgow School of Art/cloud_Interactive App Development/MyFourthProject"
+		},
+		{
+			"name": "My1510Project",
+			"path": "../../../../../OneDrive - The Glasgow School of Art/cloud_Interactive App Development/My1510Project"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.asset": "yaml",
+			"*.meta": "yaml",
+			"*.prefab": "yaml",
+			"*.unity": "yaml"
+		}
+	}
+}
