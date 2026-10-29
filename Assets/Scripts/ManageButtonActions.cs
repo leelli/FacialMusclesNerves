@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 
 public class ManageButtonActions : MonoBehaviour
@@ -12,6 +11,8 @@ public class ManageButtonActions : MonoBehaviour
 
     [SerializeField]
     public List<GameObject> muscleList = new List<GameObject>();
+
+    public static bool interactionActive = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -49,6 +50,7 @@ public class ManageButtonActions : MonoBehaviour
         
     }
 
+
     public void ShowNerve() //button to show associated nerves of SELECTED muscle
     {
         foreach (GameObject nerve in nerveList)
@@ -75,6 +77,16 @@ public class ManageButtonActions : MonoBehaviour
                 nerve.SetActive(false);
             }
         }
+    }
+
+    public void StartInteraction()
+    {
+        interactionActive = true;
+    }
+
+    public void EndInteraction()
+    {
+        interactionActive = false;
     }
 }
 

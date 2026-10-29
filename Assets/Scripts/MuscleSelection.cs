@@ -20,6 +20,9 @@ public class MuscleSelection : MonoBehaviour
 
     private NerveSelection nerveSelection;
 
+
+    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -38,6 +41,11 @@ public class MuscleSelection : MonoBehaviour
        
     }
 
+    void OnMouseEnter()
+    {
+        Debug.Log ("fuck");
+    }
+    
     void OnMouseDown()
     {
         Debug.Log (transform.name + " clicked");
