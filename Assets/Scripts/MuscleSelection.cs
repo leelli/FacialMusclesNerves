@@ -49,25 +49,29 @@ public class MuscleSelection : MonoBehaviour
     void OnMouseDown()
     {
         Debug.Log (transform.name + " clicked");
-        selectedMuscle = !selectedMuscle;
+        if (!FullModelBehavior.muscleSelected)
+        {
+            FullModelBehavior.muscleSelected = !FullModelBehavior.muscleSelected;
+            selectedMuscle = !selectedMuscle;
         
-        if (selectedMuscle)
-        {
-            meshRenderer.sharedMaterial = materialSelection;
-        }
-        else if (!selectedMuscle)
-        {
-            meshRenderer.sharedMaterial = materialOriginal;
-        }
-
-        foreach (GameObject nerve in nerveInnervation)
-        {
-            nerveSelection = nerve.GetComponent<NerveSelection>();
-            if (nerveSelection != null)
+            if (selectedMuscle)
             {
-                Debug.Log ("nerve variable changed");
-                nerveSelection.selectedNerve = selectedMuscle;
-                //nerveSelection.showNerve = selectedMuscle;
+                meshRenderer.sharedMaterial = materialSelection;
+            }
+            else if (!selectedMuscle)
+            {
+                meshRenderer.sharedMaterial = materialOriginal;
+            }
+
+            foreach (GameObject nerve in nerveInnervation)
+            {
+                nerveSelection = nerve.GetComponent<NerveSelection>();
+                if (nerveSelection != null)
+                {
+                    Debug.Log ("nerve variable changed");
+                    nerveSelection.selectedNerve = selectedMuscle;
+                    //nerveSelection.showNerve = selectedMuscle;
+                }
             }
         }
     }

@@ -3,15 +3,17 @@ using UnityEngine.UI;
 
 public class FullModelBehavior : MonoBehaviour
 {
+    //Animator animator;
     [SerializeField] private Transform targetCamera;
-
-
     private Vector3 initialRot;
     private Vector3 initialPos;
+
+    public static bool muscleSelected;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //animator = GetComponent<Animator>();
         transform.LookAt(targetCamera);
         initialRot = transform.localEulerAngles;
         initialPos = transform.position;
@@ -20,16 +22,7 @@ public class FullModelBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!ManageButtonActions.interactionActive)
-        {
-            Vector3 idleRot = new Vector3(0.0f, 0.2f, 0.0f);
-            transform.Rotate(idleRot, Space.Self);
-        }
-        else if (ManageButtonActions.interactionActive)
-        {
-            Vector3 noRot = new Vector3(0.0f, 0.0f, 0.0f);
-            transform.localRotation = Quaternion.Euler (initialRot);
-        }
+
     }
 
     public void XRotator(Slider slider)
@@ -50,17 +43,19 @@ public class FullModelBehavior : MonoBehaviour
         transform.position = finalZoom;
     }
 
-    public void HomeModel()
+    /*public void HomeModel()
     {
-        transform.localRotation = Quaternion.Euler(initialRot);
-        transform.position = initialPos;
+        animator.SetBool("InteractionActive", false);
     }
 
     public void ResetModel()
     {
-        transform.position = Vector3.Lerp(initialPos, initialPos + new Vector3 (29f, 0.0f,0.0f), 10f * Time.deltaTime);
-        //position = middlePos * Time.deltaTime;
-        transform.LookAt(targetCamera);
+        animator.SetBool("InteractionActive", true);
+    }*/
+
+    public void OnMouseDown()
+    {
+        muscleSelected = !muscleSelected;
     }
 
 }

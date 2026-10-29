@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 public class ManageButtonActions : MonoBehaviour
 {
+    Animator modelAnimator;
     private MuscleSelection muscleSelection;
     private NerveSelection nerveSelection;
 
@@ -12,12 +13,13 @@ public class ManageButtonActions : MonoBehaviour
     [SerializeField]
     public List<GameObject> muscleList = new List<GameObject>();
 
-    public static bool interactionActive = false;
+    [SerializeField]
+    public GameObject fullModel;   
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        modelAnimator = fullModel.GetComponent<Animator>();
     }
 
     public void HideMuscle() //button to hide SELECTED muscle
@@ -81,12 +83,12 @@ public class ManageButtonActions : MonoBehaviour
 
     public void StartInteraction()
     {
-        interactionActive = true;
+        modelAnimator.SetBool("InteractionActive", true);
     }
 
     public void EndInteraction()
     {
-        interactionActive = false;
+        modelAnimator.SetBool("InteractionActive", false);
     }
 }
 
