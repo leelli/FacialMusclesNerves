@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 727c2fe7b0898a84cbeb4ff90879f575
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 392726
+  packageName: MeshMerge - Mesh Combiner & Texture Array Baker
+  packageVersion: 1.0
+  assetPath: Assets/MeshMerge/Runtime/MaterialRules/Rules/AtlasBakeableMaterialRule.cs
+  uploadId: 988386

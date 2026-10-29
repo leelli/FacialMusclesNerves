@@ -1,0 +1,17 @@
+{
+    "name": "maleric.MeshMerge.Editor",
+    "rootNamespace": "maleric",
+    "references": [
+        "maleric.MeshMerge.Runtime"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
+

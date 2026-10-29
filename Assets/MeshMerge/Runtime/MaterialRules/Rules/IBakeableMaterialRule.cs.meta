@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 10bebaffa2c35a646bfe631d942e2e24
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 392726
+  packageName: MeshMerge - Mesh Combiner & Texture Array Baker
+  packageVersion: 1.0
+  assetPath: Assets/MeshMerge/Runtime/MaterialRules/Rules/IBakeableMaterialRule.cs
+  uploadId: 988386

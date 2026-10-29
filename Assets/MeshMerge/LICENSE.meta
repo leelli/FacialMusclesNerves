@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ee8498731f8271e44807b3030d22c417
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 392726
+  packageName: MeshMerge - Mesh Combiner & Texture Array Baker
+  packageVersion: 1.0
+  assetPath: Assets/MeshMerge/LICENSE
+  uploadId: 988386

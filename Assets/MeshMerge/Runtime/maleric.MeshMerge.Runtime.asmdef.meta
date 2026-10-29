@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 92402b159a108fd468d64963dd58520b
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 392726
+  packageName: MeshMerge - Mesh Combiner & Texture Array Baker
+  packageVersion: 1.0
+  assetPath: Assets/MeshMerge/Runtime/maleric.MeshMerge.Runtime.asmdef
+  uploadId: 988386

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 8221fda99b010f940b5ae0586e8b14c1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 392726
+  packageName: MeshMerge - Mesh Combiner & Texture Array Baker
+  packageVersion: 1.0
+  assetPath: Assets/MeshMerge/Runtime/ManagableMesh/SplittableMeshOwner.cs
+  uploadId: 988386

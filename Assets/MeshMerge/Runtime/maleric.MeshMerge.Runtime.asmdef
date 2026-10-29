@@ -1,0 +1,13 @@
+{
+    "name": "maleric.MeshMerge.Runtime",
+    "rootNamespace": "maleric",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
+

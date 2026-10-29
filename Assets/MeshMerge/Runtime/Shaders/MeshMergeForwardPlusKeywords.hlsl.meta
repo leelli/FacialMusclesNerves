@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 535168535e8e5c34cad083d53b1eca80
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 392726
+  packageName: MeshMerge - Mesh Combiner & Texture Array Baker
+  packageVersion: 1.0
+  assetPath: Assets/MeshMerge/Runtime/Shaders/MeshMergeForwardPlusKeywords.hlsl
+  uploadId: 988386
