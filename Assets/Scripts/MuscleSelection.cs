@@ -20,8 +20,8 @@ public class MuscleSelection : MonoBehaviour
 
     private NerveSelection nerveSelection;
 
-
-    
+    [SerializeField]
+    public GameObject fullModel;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -49,10 +49,11 @@ public class MuscleSelection : MonoBehaviour
     void OnMouseDown()
     {
         Debug.Log (transform.name + " clicked");
-        if (!FullModelBehavior.muscleSelected)
+        Animator modelAnimator = fullModel.GetComponent<Animator>();
+        if (modelAnimator.GetBool("InteractionActive"))
         {
-            FullModelBehavior.muscleSelected = !FullModelBehavior.muscleSelected;
             selectedMuscle = !selectedMuscle;
+            FullModelBehavior.muscleSelected = !FullModelBehavior.muscleSelected;
         
             if (selectedMuscle)
             {

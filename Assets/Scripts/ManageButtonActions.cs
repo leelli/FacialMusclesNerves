@@ -16,6 +16,8 @@ public class ManageButtonActions : MonoBehaviour
     [SerializeField]
     public GameObject fullModel;   
 
+    public GameObject menuMuscleNerve;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -84,11 +86,18 @@ public class ManageButtonActions : MonoBehaviour
     public void StartInteraction()
     {
         modelAnimator.SetBool("InteractionActive", true);
+        menuMuscleNerve.SetActive (true);
     }
 
     public void EndInteraction()
     {
         modelAnimator.SetBool("InteractionActive", false);
+        menuMuscleNerve.SetActive (false);
+    }
+
+    public void ResetModel()
+    {
+        
     }
 }
 
