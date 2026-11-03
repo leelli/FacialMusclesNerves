@@ -3,16 +3,13 @@ using UnityEngine.UI;
 
 public class FullModelBehavior : MonoBehaviour
 {
-    //Animator animator;
+    Animator animator;
     [SerializeField] private Transform targetCamera;
-
-
-    public static bool muscleSelected;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         transform.LookAt(targetCamera);
     }
 
@@ -24,7 +21,14 @@ public class FullModelBehavior : MonoBehaviour
 
     public void OnMouseDown()
     {
-        //muscleSelected = !muscleSelected;
+        /*if (animator.GetBool("MuscleSelected"))
+        {
+            animator.SetBool("MuscleSelected", true);
+        }
+        else //if (!animator.GetBool("MuscleSelected"))
+        {
+            animator.SetBool("MuscleSelected", false);
+        }*/
     }
 
 }

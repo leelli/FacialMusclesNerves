@@ -1487,6 +1487,7 @@ GameObject:
   - component: {fileID: 626991118}
   - component: {fileID: 626991119}
   - component: {fileID: 626991120}
+  - component: {fileID: 626991121}
   m_Layer: 0
   m_Name: InteractionManager
   m_TagString: Untagged
@@ -1522,10 +1523,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ManageButtonActions
   nerveList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1863449093028380769}
+  - {fileID: 4841558180785628205}
+  - {fileID: 6231398521365926317}
+  - {fileID: 4941494781270266641}
   muscleList:
   - {fileID: 6018410069635828249}
   - {fileID: 6068435884145409076}
@@ -1542,7 +1543,6 @@ MonoBehaviour:
   - {fileID: 2804629085794569553}
   - {fileID: 4531564762983122475}
   fullModel: {fileID: 2214725677485327461}
-  menuMuscleNerve: {fileID: 0}
 --- !u!114 &626991120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1556,6 +1556,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MuscleNerveMenu
   menuMuscleNerve: {fileID: 6902659660478689786}
+--- !u!114 &626991121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626991117}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6004c9568af5941aaa05bbf08fd778bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MuscleSelection
+  selectedMuscle: 0
+  materialSelection: {fileID: 0}
+  nerveInnervation: []
+  fullModel: {fileID: 2214725677485327461}
+  menu: {fileID: 0}
 --- !u!1 &643461164
 GameObject:
   m_ObjectHideFlags: 0
@@ -1699,7 +1716,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &750182269
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1865,19 +1882,7 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 764676339}
-        m_TargetAssemblyTypeName: SliderManager, Assembly-CSharp
-        m_MethodName: YRotator
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &836019538
 GameObject:
   m_ObjectHideFlags: 0
@@ -1946,8 +1951,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1034477203}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2447,7 +2452,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1266071300
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2806,8 +2811,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2132687103}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3428,7 +3433,7 @@ RectTransform:
   m_Father: {fileID: 836019539}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3903,7 +3908,7 @@ RectTransform:
   m_Father: {fileID: 240454331}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4133,7 +4138,8 @@ MonoBehaviour:
   materialSelection: {fileID: 2100000, guid: e98ba61b4998c5341a85d8e2aaed16c7, type: 2}
   nerveInnervation:
   - {fileID: 4941494781270266641}
-  fullModel: {fileID: 0}
+  fullModel: {fileID: 2214725677485327461}
+  menu: {fileID: 6902659660478689786}
 --- !u!23 &676575557773108561
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4291,7 +4297,8 @@ MonoBehaviour:
   materialSelection: {fileID: 2100000, guid: e98ba61b4998c5341a85d8e2aaed16c7, type: 2}
   nerveInnervation:
   - {fileID: 4841558180785628205}
-  fullModel: {fileID: 0}
+  fullModel: {fileID: 2214725677485327461}
+  menu: {fileID: 6902659660478689786}
 --- !u!1 &979438936552423597
 GameObject:
   m_ObjectHideFlags: 0
@@ -4329,7 +4336,8 @@ MonoBehaviour:
   nerveInnervation:
   - {fileID: 1863449093028380769}
   - {fileID: 4841558180785628205}
-  fullModel: {fileID: 0}
+  fullModel: {fileID: 2214725677485327461}
+  menu: {fileID: 6902659660478689786}
 --- !u!23 &1059989858783645390
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4419,7 +4427,8 @@ MonoBehaviour:
   nerveInnervation:
   - {fileID: 1863449093028380769}
   - {fileID: 4841558180785628205}
-  fullModel: {fileID: 0}
+  fullModel: {fileID: 2214725677485327461}
+  menu: {fileID: 6902659660478689786}
 --- !u!23 &1480772521176157697
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4603,6 +4612,7 @@ GameObject:
   - component: {fileID: 2183943235123009655}
   - component: {fileID: 7604547229206587735}
   - component: {fileID: 7105996689392127662}
+  - component: {fileID: 7604547229206587736}
   m_Layer: 0
   m_Name: ZygoFacial
   m_TagString: Untagged
@@ -5121,7 +5131,8 @@ MonoBehaviour:
   nerveInnervation:
   - {fileID: 1863449093028380769}
   - {fileID: 4841558180785628205}
-  fullModel: {fileID: 0}
+  fullModel: {fileID: 2214725677485327461}
+  menu: {fileID: 6902659660478689786}
 --- !u!33 &3273380421031569749
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5146,7 +5157,8 @@ MonoBehaviour:
   materialSelection: {fileID: 2100000, guid: e98ba61b4998c5341a85d8e2aaed16c7, type: 2}
   nerveInnervation:
   - {fileID: 4941494781270266641}
-  fullModel: {fileID: 0}
+  fullModel: {fileID: 2214725677485327461}
+  menu: {fileID: 6902659660478689786}
 --- !u!4 &3404181252680784524
 Transform:
   m_ObjectHideFlags: 0
@@ -5383,7 +5395,8 @@ MonoBehaviour:
   nerveInnervation:
   - {fileID: 1863449093028380769}
   - {fileID: 4841558180785628205}
-  fullModel: {fileID: 0}
+  fullModel: {fileID: 2214725677485327461}
+  menu: {fileID: 6902659660478689786}
 --- !u!64 &3813490540542265145
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5731,6 +5744,7 @@ GameObject:
   - component: {fileID: 2030980197496571643}
   - component: {fileID: 4438935143349454650}
   - component: {fileID: 8401368188914818141}
+  - component: {fileID: 8401368188914818142}
   m_Layer: 0
   m_Name: BuccalFacial
   m_TagString: Untagged
@@ -5797,6 +5811,7 @@ GameObject:
   - component: {fileID: 4493835777357811523}
   - component: {fileID: 2137411716089407968}
   - component: {fileID: 1059989858783645390}
+  - component: {fileID: 4941494781270266642}
   m_Layer: 0
   m_Name: TemporalFacial
   m_TagString: Untagged
@@ -5804,6 +5819,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &4941494781270266642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4941494781270266641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcea4dacd4059604f9aa90949d82e4fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NerveSelection
+  selectedNerve: 0
+  showNerve: 0
 --- !u!114 &4989510907106441009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5821,7 +5850,8 @@ MonoBehaviour:
   nerveInnervation:
   - {fileID: 4841558180785628205}
   - {fileID: 6231398521365926317}
-  fullModel: {fileID: 0}
+  fullModel: {fileID: 2214725677485327461}
+  menu: {fileID: 6902659660478689786}
 --- !u!4 &4998174843184318355
 Transform:
   m_ObjectHideFlags: 0
@@ -5855,7 +5885,8 @@ MonoBehaviour:
   - {fileID: 4841558180785628205}
   - {fileID: 4941494781270266641}
   - {fileID: 1863449093028380769}
-  fullModel: {fileID: 0}
+  fullModel: {fileID: 2214725677485327461}
+  menu: {fileID: 6902659660478689786}
 --- !u!23 &5114288737280786387
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5922,7 +5953,8 @@ MonoBehaviour:
   nerveInnervation:
   - {fileID: 4841558180785628205}
   - {fileID: 1863449093028380769}
-  fullModel: {fileID: 0}
+  fullModel: {fileID: 2214725677485327461}
+  menu: {fileID: 6902659660478689786}
 --- !u!222 &5296986899863628890
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6035,7 +6067,8 @@ MonoBehaviour:
   materialSelection: {fileID: 2100000, guid: e98ba61b4998c5341a85d8e2aaed16c7, type: 2}
   nerveInnervation:
   - {fileID: 6231398521365926317}
-  fullModel: {fileID: 0}
+  fullModel: {fileID: 2214725677485327461}
+  menu: {fileID: 6902659660478689786}
 --- !u!1 &5389464269967710540
 GameObject:
   m_ObjectHideFlags: 0
@@ -6477,6 +6510,7 @@ GameObject:
   - component: {fileID: 7023269752433980560}
   - component: {fileID: 3457120039960176701}
   - component: {fileID: 8237804519281450363}
+  - component: {fileID: 8237804519281450364}
   m_Layer: 0
   m_Name: MarginalFacial
   m_TagString: Untagged
@@ -6692,7 +6726,8 @@ MonoBehaviour:
   materialSelection: {fileID: 2100000, guid: e98ba61b4998c5341a85d8e2aaed16c7, type: 2}
   nerveInnervation:
   - {fileID: 6231398521365926317}
-  fullModel: {fileID: 0}
+  fullModel: {fileID: 2214725677485327461}
+  menu: {fileID: 6902659660478689786}
 --- !u!64 &7042739465066199794
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6848,7 +6883,8 @@ MonoBehaviour:
   nerveInnervation:
   - {fileID: 4941494781270266641}
   - {fileID: 1863449093028380769}
-  fullModel: {fileID: 0}
+  fullModel: {fileID: 2214725677485327461}
+  menu: {fileID: 6902659660478689786}
 --- !u!64 &7236441228982521021
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6898,6 +6934,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863449093028380769}
   m_Mesh: {fileID: 4999324591879248770, guid: fbe16d41ebfc4e9489c73dd8ae8283ed, type: 3}
+--- !u!114 &7604547229206587736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863449093028380769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcea4dacd4059604f9aa90949d82e4fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NerveSelection
+  selectedNerve: 0
+  showNerve: 0
 --- !u!1 &7667506336591205126
 GameObject:
   m_ObjectHideFlags: 0
@@ -7040,7 +7090,8 @@ MonoBehaviour:
   materialSelection: {fileID: 2100000, guid: e98ba61b4998c5341a85d8e2aaed16c7, type: 2}
   nerveInnervation:
   - {fileID: 6231398521365926317}
-  fullModel: {fileID: 0}
+  fullModel: {fileID: 2214725677485327461}
+  menu: {fileID: 6902659660478689786}
 --- !u!64 &8034193388406985558
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7112,6 +7163,20 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8237804519281450364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6231398521365926317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcea4dacd4059604f9aa90949d82e4fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NerveSelection
+  selectedNerve: 0
+  showNerve: 0
 --- !u!1 &8257096742843039115
 GameObject:
   m_ObjectHideFlags: 0
@@ -7240,6 +7305,20 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8401368188914818142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4841558180785628205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcea4dacd4059604f9aa90949d82e4fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NerveSelection
+  selectedNerve: 0
+  showNerve: 0
 --- !u!222 &8576080660432628959
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7669,7 +7748,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 875e0e29d46f03140be3e135b9540b35, type: 2}
-  m_CullingMode: 2
+  m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0

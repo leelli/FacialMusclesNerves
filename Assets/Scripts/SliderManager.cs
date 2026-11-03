@@ -12,21 +12,25 @@ public class SliderManager : MonoBehaviour
         slider = GetComponent<Slider>();
     }
 
-    public void XRotator()
+    public void XRotator()//didn't use
     {
        Vector3 initialRot = fullModel.transform.localEulerAngles;
        Vector3 finalRot = initialRot + new Vector3 (slider.value, 0.0f, 0.0f);
        fullModel.transform.localRotation = Quaternion.Euler(finalRot);
     }
 
-    public void YRotator()
+    public void YRotator()//horizontal slider
     {
+        //Animator modelAnimator = fullModel.GetComponent<Animator>();
+        //modelAnimator.SetFloat("RotateBy", slider.value);
         Vector3 finalRot = new Vector3 (0.0f, slider.value + 180, 0.0f);
         fullModel.transform.localRotation = Quaternion.Euler(finalRot);
     }
 
-    public void ZoomSlider()
+    public void ZoomSlider()//vertical slider
     {
+        //Animator modelAnimator = fullModel.GetComponent<Animator>();
+        //modelAnimator.SetFloat("ZoomBy", 93.313f-slider.value);
         Vector3 finalZoom = new Vector3 (0.0f, 0.0f, 93.313f + slider.value);
         fullModel.transform.position = finalZoom;
     }
