@@ -20,8 +20,8 @@ public class MuscleSelection : MonoBehaviour
 
     private NerveSelection nerveSelection;
 
-
-    
+    [SerializeField]
+    public GameObject fullModel;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -49,25 +49,30 @@ public class MuscleSelection : MonoBehaviour
     void OnMouseDown()
     {
         Debug.Log (transform.name + " clicked");
-        selectedMuscle = !selectedMuscle;
+        Animator modelAnimator = fullModel.GetComponent<Animator>();
+        if (modelAnimator.GetBool("InteractionActive"))
+        {
+            selectedMuscle = !selectedMuscle;
+            FullModelBehavior.muscleSelected = !FullModelBehavior.muscleSelected;
         
-        if (selectedMuscle)
-        {
-            meshRenderer.sharedMaterial = materialSelection;
-        }
-        else if (!selectedMuscle)
-        {
-            meshRenderer.sharedMaterial = materialOriginal;
-        }
-
-        foreach (GameObject nerve in nerveInnervation)
-        {
-            nerveSelection = nerve.GetComponent<NerveSelection>();
-            if (nerveSelection != null)
+            if (selectedMuscle)
             {
-                Debug.Log ("nerve variable changed");
-                nerveSelection.selectedNerve = selectedMuscle;
-                //nerveSelection.showNerve = selectedMuscle;
+                meshRenderer.sharedMaterial = materialSelection;
+            }
+            else if (!selectedMuscle)
+            {
+                meshRenderer.sharedMaterial = materialOriginal;
+            }
+
+            foreach (GameObject nerve in nerveInnervation)
+            {
+                nerveSelection = nerve.GetComponent<NerveSelection>();
+                if (nerveSelection != null)
+                {
+                    Debug.Log ("nerve variable changed");
+                    nerveSelection.selectedNerve = selectedMuscle;
+                    //nerveSelection.showNerve = selectedMuscle;
+                }
             }
         }
     }
