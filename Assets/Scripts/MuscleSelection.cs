@@ -1,38 +1,33 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 
 public class MuscleSelection : MonoBehaviour
 {  
-    public bool selectedMuscle = false;
-    //public bool hideMuscle = false; //muscle is NOT hidden by default
+    public bool selectedMuscle = false;//specifies the selection
+    public static bool muscleSelected = false;//specifies state of interaction
     private MeshRenderer meshRenderer;
 
-    [SerializeField]
-    public Material materialSelection;
-    
+    [SerializeField] public Material materialSelection;
     private Material materialOriginal;
 
     //link specific nerves
-    [SerializeField]
-    public GameObject[] nerveInnervation;
+    [SerializeField] public GameObject[] nerveInnervation;
     //public List<GameObject> nerveInnervation = new List<GameObject>();
 
     private NerveSelection nerveSelection;
+    //private FullModelBehavior fullModelBehavior;
 
-    [SerializeField]
-    public GameObject fullModel;
+    [SerializeField] public GameObject fullModel;
+    [SerializeField] public GameObject menu;
+    [SerializeField] public TMP_Text textLabel;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         meshRenderer = GetComponent<MeshRenderer>();
         materialOriginal = meshRenderer.material;
-
-        /*if (!hideMuscle) // muscle default = NOT hidden
-        {
-            gameObject.SetActive(true);
-        }*/
     }
 
     // Update is called once per frame
@@ -41,27 +36,27 @@ public class MuscleSelection : MonoBehaviour
        
     }
 
-    void OnMouseEnter()
-    {
-        Debug.Log ("fuck");
-    }
-    
     void OnMouseDown()
     {
         Debug.Log (transform.name + " clicked");
         Animator modelAnimator = fullModel.GetComponent<Animator>();
-        if (modelAnimator.GetBool("InteractionActive"))
+        if (modelAnimator.GetBool("InteractionActive")) //&& modelAnimator.GetBool("MuscleSelected"))
         {
             selectedMuscle = !selectedMuscle;
-            FullModelBehavior.muscleSelected = !FullModelBehavior.muscleSelected;
-        
-            if (selectedMuscle)
+
+            if (selectedMuscle && !muscleSelected)
             {
                 meshRenderer.sharedMaterial = materialSelection;
+                menu.SetActive(true);
+                muscleSelected = !muscleSelected;
+                textLabel.text = gameObject.name;
             }
             else if (!selectedMuscle)
             {
                 meshRenderer.sharedMaterial = materialOriginal;
+                menu.SetActive(false);
+                muscleSelected = !muscleSelected;
+                textLabel.text = "";
             }
 
             foreach (GameObject nerve in nerveInnervation)
@@ -71,15 +66,18 @@ public class MuscleSelection : MonoBehaviour
                 {
                     Debug.Log ("nerve variable changed");
                     nerveSelection.selectedNerve = selectedMuscle;
-                    //nerveSelection.showNerve = selectedMuscle;
+                    nerveSelection.showNerve = selectedMuscle;
                 }
             }
+
+
         }
     }
 
 }
 
-/*if (selectedMuscle && hideMuscle)//if Hide Muscle button is clicked hideMuscle is true
+/*recycling if needed
+        if (selectedMuscle && hideMuscle)//if Hide Muscle button is clicked hideMuscle is true
         {
             Debug.Log (transform.name + " is shown");
             //show menu

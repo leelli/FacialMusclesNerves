@@ -3,33 +3,36 @@ using UnityEngine;
 public class MuscleNerveMenu : MonoBehaviour
 {
     public GameObject menuMuscleNerve;
+   
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     void Update()
     {
-        if (!FullModelBehavior.muscleSelected)
-        {
-            menuMuscleNerve.SetActive(false);
-        }
-        else if (FullModelBehavior.muscleSelected)
+        /*if (muscleSelection.muscleSelected)
         {
             menuMuscleNerve.SetActive(true);
+            Debug.Log("its not here");
         }
+        else if (!muscleSelection.muscleSelected)
+        {
+            menuMuscleNerve.SetActive(false);
+            Debug.Log("its not here either");
+        }*/
     }
 
 
-    public void MuscleNerve()
+    /*public void MuscleNerve()
     {
         {
             menuMuscleNerve.SetActive(true);
             /*Vector3 mousePos = Input.mousePosition;
             GameObject menuClone = 
-                Instantiate(menuPrefab, mousePos, transform.rotation);*/
+                Instantiate(menuPrefab, mousePos, transform.rotation);
         }
 
-    }
+    }*/
 }
