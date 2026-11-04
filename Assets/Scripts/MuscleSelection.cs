@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 
 public class MuscleSelection : MonoBehaviour
 {  
@@ -20,6 +21,7 @@ public class MuscleSelection : MonoBehaviour
 
     [SerializeField] public GameObject fullModel;
     [SerializeField] public GameObject menu;
+    [SerializeField] public TMP_Text textLabel;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -47,12 +49,14 @@ public class MuscleSelection : MonoBehaviour
                 meshRenderer.sharedMaterial = materialSelection;
                 menu.SetActive(true);
                 muscleSelected = !muscleSelected;
+                textLabel.text = gameObject.name;
             }
             else if (!selectedMuscle)
             {
                 meshRenderer.sharedMaterial = materialOriginal;
                 menu.SetActive(false);
                 muscleSelected = !muscleSelected;
+                textLabel.text = "";
             }
 
             foreach (GameObject nerve in nerveInnervation)

@@ -32,8 +32,7 @@ public class SliderManager : MonoBehaviour
     {
         //Animator modelAnimator = fullModel.GetComponent<Animator>();
         //modelAnimator.SetFloat("ZoomBy", slider.value);
-        Vector3 initialPos = fullModel.transform.localEulerAngles;
-        Vector3 finalZoom = initialPos + new Vector3 (0.0f, 0.0f, slider.value);
+        Vector3 finalZoom = new Vector3 (0.0f, 0.0f, slider.value);
         fullModel.transform.position = finalZoom;
     }
 
