@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -9,6 +10,11 @@ public class DropdownInfo : MonoBehaviour
     [SerializeField] private GameObject palsyInfo;
     [SerializeField] private GameObject citation;
 
+    public void GetDropDownValue ()
+    {
+        int pickedEntryIndex = infoDropdown.value;
+        Debug.Log (pickedEntryIndex);
+    }
     public void DropdownOptions (int value)
     {
         if (value ==0)

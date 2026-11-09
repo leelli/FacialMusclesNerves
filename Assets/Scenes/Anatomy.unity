@@ -3224,11 +3224,11 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1496906171}
   m_FillRect: {fileID: 846812205}
   m_HandleRect: {fileID: 1496906170}
-  m_Direction: 0
+  m_Direction: 1
   m_MinValue: -180
   m_MaxValue: 180
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 18
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -3547,8 +3547,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1034477203}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0.45, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4024,7 +4024,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5, y: 0}
+  m_AnchoredPosition: {x: 5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1047469802
@@ -4928,10 +4928,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ad85086077f844a784ce11ae707b52f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropdownInfo
-  infoDropdown: {fileID: 0}
+  infoDropdown: {fileID: 1261446905}
   facialNerveInfo: {fileID: 2016743585}
-  functionsInfo: {fileID: 0}
-  palsyInfo: {fileID: 0}
+  functionsInfo: {fileID: 805021608}
+  palsyInfo: {fileID: 1335906682}
   citation: {fileID: 972601425}
 --- !u!1 &1266071299
 GameObject:
@@ -5506,8 +5506,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2132687103}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0.45, y: 0}
+  m_AnchorMax: {x: 0.45, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
